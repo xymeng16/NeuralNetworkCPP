@@ -127,6 +127,7 @@
     <ClInclude Include="Neuron.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="Neuron.cpp" />
   </ItemGroup>

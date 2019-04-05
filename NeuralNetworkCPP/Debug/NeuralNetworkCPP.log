@@ -1,2 +1,2 @@
-﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-E:\Code\NeuralNetworkCPP\Debug\NeuralNetworkCPP.exe : fatal error LNK1120: 1 unresolved externals
+﻿  main.cpp
+  NeuralNetworkCPP.vcxproj -> F:\Code\NeuralNetworkCPP\Debug\NeuralNetworkCPP.exe
