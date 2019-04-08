@@ -9,15 +9,15 @@ class Matrix
 public:
 	Matrix(unsigned dim_x, unsigned dim_y) 
 	{
-		_dim_x = dim_x;
-		_dim_y = dim_y;
-		_inner.resize(dim_x * dim_y, 0); 
+		this->_dim_x = dim_x;
+		this->_dim_y = dim_y;
+		this->_inner.resize(dim_x * dim_y, 0);
 	}
 
 	Matrix(const Matrix& mat)
 	{
-		_dim_x = mat.GetDimX();
-		_dim_y = mat.GetDimY();
+		this->_dim_x = mat.GetDimX();
+		this->_dim_y = mat.GetDimY();
 		// Copy constructor, dim set before	
 		_inner.resize(_dim_x * _dim_y, 0);
 		for (unsigned i = 0; i < _dim_x; i++)
@@ -29,23 +29,35 @@ public:
 		}
 	}
 
+	Matrix(const vector<T> vec, unsigned dim_x, unsigned dim_y)
+	{
+		if ((vec.size() + 1) != (dim_x + 1) * (dim_y + 1))
+		{
+			throw length_error("The size of the vector doesn't match the input dimension.");
+		}
+
+	}
 	~Matrix(){ _inner.~vector(); }
 
-	const unsigned GetDimX() const { return _dim_x; }
-	const unsigned GetDimY() const { return _dim_y; }
+	const unsigned GetDimX() const { return this->_dim_x; }
+	const unsigned GetDimY() const { return this->_dim_y; }
 
 	T& operator() (const unsigned x, const unsigned y) const // Make the operator constant to avoid losing some const-volatile qualifiers...
 	{
-		if (x >= _dim_x || y >= _dim_y)
+		if (x >= this->_dim_x || y >= this->_dim_y)
 		{
 			throw out_of_range("Matrix indices out of range error.");
 		}
-		return (T&)_inner[x * _dim_y + y];
+		return (T&)_inner[x * this->_dim_y + y];
 	}
 
-	const T& operator+ (const Matrix<T>)
+	const T& operator+ (const Matrix<T> mat)
 	{
-		
+		if (mat.GetDimX() != this->GetDimX() || mat.GetDimY() != this->GetDimY())
+		{
+			throw length_error("Matrices should have same dimensions.")
+		}
+
 	}
 
 private:

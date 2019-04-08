@@ -1,2 +1,8 @@
 ﻿  main.cpp
-  NeuralNetworkCPP.vcxproj -> F:\Code\NeuralNetworkCPP\Debug\NeuralNetworkCPP.exe
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(49): error C2760: syntax error: unexpected token '}', expected 'statement'
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(54): note: see reference to class template instantiation 'Matrix<T>' being compiled
+  Matrix.cpp
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(49): error C2760: syntax error: unexpected token '}', expected 'statement'
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(54): note: see reference to class template instantiation 'Matrix<T>' being compiled
+  Neuron.cpp
+  Generating Code...
