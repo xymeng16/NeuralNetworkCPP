@@ -1,8 +1,13 @@
 #pragma once
 #include <vector>
 #include <stdexcept>
+#include <string>
 using namespace std;
 
+enum DataType
+{
+	UNSIGNED=0, INT, FLOAT, DOUBLE, UNKNOWN
+};
 template <class T>
 class Matrix
 {
@@ -35,7 +40,14 @@ public:
 		{
 			throw length_error("The size of the vector doesn't match the input dimension.");
 		}
-
+		_inner.resize(_dim_x * _dim_y, 0);
+		for (unsigned i = 0; i < _dim_x; i++)
+		{
+			for (unsigned j = 0; j < _dim_y; j++)
+			{
+				_inner[i * _dim_y + j] = vec[i * _dim_y + j];
+			}
+		}
 	}
 	~Matrix(){ _inner.~vector(); }
 
@@ -55,13 +67,39 @@ public:
 	{
 		if (mat.GetDimX() != this->GetDimX() || mat.GetDimY() != this->GetDimY())
 		{
-			throw length_error("Matrices should have same dimensions.")
+			throw length_error("Matrices should have same dimensions.");
 		}
+		
+		for (int i = 0; i < this->_dim_x; i++)
+		{
+			for (int j = 0; j < this->_dim_y; j++)
+			{
 
+			}
+		}
 	}
-
+	DataType _getDataType()
+	{
+		
+		string s(typeid(T).name());
+		switch (s)
+		{
+		case "unsigned int":
+			return UNSIGNED;
+		case "int":
+			return INT;
+		case "float":
+			return FLOAT;
+		case "DOUBLE":
+			return DOUBLE;
+		default:
+			return UNKNOWN;
+		}
+	}
 private:
 	unsigned _dim_x, _dim_y;
 	vector<T> _inner;
+
+	
 };
 
