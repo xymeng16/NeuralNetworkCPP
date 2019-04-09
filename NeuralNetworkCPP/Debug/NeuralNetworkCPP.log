@@ -1,21 +1,23 @@
 ﻿  main.cpp
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(86): error C2450: switch expression of type 'std::string' is illegal
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(86): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(82): note: while compiling class template member function 'DataType Matrix<unsigned int>::_getDataType(void)'
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\main.cpp(16): note: see reference to function template instantiation 'DataType Matrix<unsigned int>::_getDataType(void)' being compiled
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\main.cpp(7): note: see reference to class template instantiation 'Matrix<unsigned int>' being compiled
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(87): error C2440: 'type cast': cannot convert from 'const char [13]' to 'int'
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(87): note: There is no context in which this conversion is possible
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(87): error C2046: illegal case
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(89): error C2440: 'type cast': cannot convert from 'const char [4]' to 'int'
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(89): note: There is no context in which this conversion is possible
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(89): error C2046: illegal case
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(91): error C2440: 'type cast': cannot convert from 'const char [6]' to 'int'
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(91): note: There is no context in which this conversion is possible
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(91): error C2046: illegal case
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(93): error C2440: 'type cast': cannot convert from 'const char [7]' to 'int'
-  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(93): note: There is no context in which this conversion is possible
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(93): error C2046: illegal case
-E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(97): warning C4065: switch statement contains 'default' but no 'case' labels
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(157): warning C4018: '<': signed/unsigned mismatch
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(153): note: while compiling class template member function 'std::ostream &operator <<(std::ostream &,const Matrix<int> &)'
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\main.cpp(18): note: see reference to function template instantiation 'std::ostream &operator <<(std::ostream &,const Matrix<int> &)' being compiled
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(112): note: see reference to class template instantiation 'Matrix<int>' being compiled
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(193): note: see reference to class template instantiation 'Matrix<T>' being compiled
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(160): warning C4018: '<': signed/unsigned mismatch
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(139): warning C4018: '<': signed/unsigned mismatch
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(132): note: while compiling class template member function 'const Matrix<double> &Matrix<int>::operator *(const Matrix<double> &)'
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\main.cpp(18): note: see reference to function template instantiation 'const Matrix<double> &Matrix<int>::operator *(const Matrix<double> &)' being compiled
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(141): warning C4018: '<': signed/unsigned mismatch
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(143): warning C4018: '<': signed/unsigned mismatch
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(85): warning C4018: '<': signed/unsigned mismatch
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(72): note: while compiling class template member function 'const Matrix<double> &Matrix<int>::operator +(const Matrix<int>)'
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\main.cpp(18): note: see reference to function template instantiation 'const Matrix<double> &Matrix<int>::operator +(const Matrix<int>)' being compiled
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(87): warning C4018: '<': signed/unsigned mismatch
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(100): warning C4018: '<': signed/unsigned mismatch
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(96): note: while compiling class template member function 'const Matrix<double> &operator *(const double,const Matrix<double> &)'
+  E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\main.cpp(18): note: see reference to function template instantiation 'const Matrix<double> &operator *(const double,const Matrix<double> &)' being compiled
+E:\Code\NeuralNetworkCPP\NeuralNetworkCPP\Matrix.h(102): warning C4018: '<': signed/unsigned mismatch
   Matrix.cpp
   Generating Code...
+  NeuralNetworkCPP.vcxproj -> E:\Code\NeuralNetworkCPP\Debug\NeuralNetworkCPP.exe
