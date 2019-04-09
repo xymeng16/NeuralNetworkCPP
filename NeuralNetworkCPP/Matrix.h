@@ -3,6 +3,7 @@
 #include <stdexcept>
 #include <string>
 #include <iostream>
+
 using namespace std;
 
 enum DataType
@@ -168,7 +169,6 @@ public:
 	}
 	DataType GetDataType() const
 	{
-		/// TODO: Fix the string siwtch expression bug 
 		string s(typeid(T).name());
 		if (s == "unsigned int")
 			return UNSIGNED;
@@ -189,6 +189,5 @@ public:
 private:
 	unsigned _dim_x, _dim_y;
 	vector<T> _inner;
-	
 };
 

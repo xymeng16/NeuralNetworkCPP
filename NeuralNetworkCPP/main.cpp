@@ -15,6 +15,6 @@ int main()
 	mat2(0, 0) = 33;
 	cout << mat(0, 0) << " " << mat2(0, 0) << endl;
 	// cout << typeid(mat(0,0)).name() << " " << typeid(mat2(0, 0)).name() << " " << typeid(mat3(0, 0)).name() << " " << typeid(mat4(0, 0)).name();
-	cout << mat << mat2 << mat3 << mat + mat2 << 2.4 * (mat2 + mat) << mat * mat3;
+	cout << mat << mat2 << mat3 << mat + mat2 << 2.4 * (mat2 + mat) << mat3 * mat;
 	return 0;
 }
