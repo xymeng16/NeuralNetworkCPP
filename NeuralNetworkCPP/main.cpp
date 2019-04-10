@@ -4,7 +4,7 @@
 #include "Neuron.h"
 
 using namespace std;
-
+using namespace NeuralNetworkCPP;
 int main()
 {
 	//Matrix<int> mat(1, 2);

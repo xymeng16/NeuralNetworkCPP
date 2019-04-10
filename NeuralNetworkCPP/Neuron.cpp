@@ -1,7 +1,7 @@
 #include "Neuron.h"
 #include "Utils.h"
 
-
+namespace NeuralNetworkCPP {
 Neuron::Neuron(Matrix<double> weights, double bias) : _bias(bias)
 {
 	_weights = new Matrix<double>(weights);
@@ -17,4 +17,5 @@ double Neuron::FeedForward(Matrix<double> inputs)
 {
 	double total;
 	return sigmoid(InnerProduct(inputs, *(this->_weights))+_bias);
+}
 }
