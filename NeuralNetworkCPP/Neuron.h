@@ -1,8 +1,13 @@
 #pragma once
+#include "Matrix.h"
 class Neuron
 {
 public:
-	Neuron();
+	Neuron(Matrix<double> weights, double bias);
 	~Neuron();
+	double FeedForward(Matrix<double> inputs);
+private:
+	Matrix<double> *_weights;
+	double _bias;
 };
 

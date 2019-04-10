@@ -18,6 +18,7 @@ template <class T>
 class Matrix
 {
 public:
+	vector<T> _inner;
 	Matrix(unsigned dim_x, unsigned dim_y) 
 	{
 		this->_dim_x = dim_x;
@@ -40,13 +41,14 @@ public:
 		}
 	}
 
-	Matrix(const vector<T> vec, unsigned dim_x, unsigned dim_y)
+	Matrix(const vector<T> vec, unsigned dim_x, unsigned dim_y) :_dim_x(dim_x), _dim_y(dim_y)
 	{
-		if ((vec.size() + 1) != (dim_x + 1) * (dim_y + 1))
+		if ((vec.size()) != (dim_x) * (dim_y))
 		{
 			throw length_error("The size of the vector doesn't match the input dimension.");
 		}
-		_inner.resize(_dim_x * _dim_y, 0);
+		
+		_inner.resize(dim_x * dim_y, 0);
 		for (unsigned i = 0; i < _dim_x; i++)
 		{
 			for (unsigned j = 0; j < _dim_y; j++)
@@ -55,6 +57,7 @@ public:
 			}
 		}
 	}
+
 	~Matrix(){ _inner.~vector(); }
 
 	const unsigned GetDimX() const { return this->_dim_x; }
@@ -108,7 +111,7 @@ public:
 
 		return *result;
 	}
-	const Matrix<double>& operator*(const Matrix<int>& mat)
+	const Matrix<double>& operator*(const Matrix<int>& mat) const
 	{
 		if (this->_dim_y != mat.GetDimX())
 		{
@@ -129,7 +132,7 @@ public:
 
 		return *result;
 	}
-	const Matrix<double>& operator*(const Matrix<double>& mat)
+	const Matrix<double>& operator*(const Matrix<double>& mat) const
 	{
 		if (this->_dim_y != mat.GetDimX())
 		{
@@ -188,6 +191,6 @@ public:
 	}
 private:
 	unsigned _dim_x, _dim_y;
-	vector<T> _inner;
+	
 };
 
