@@ -1,10 +1,10 @@
 #pragma once
 namespace NeuralNetworkCPP {
-	class Layer
+	class BaseLayer
 	{
 	public:
-		Layer();
-		~Layer();
+		BaseLayer();
+		~BaseLayer();
 	};
 }
 
