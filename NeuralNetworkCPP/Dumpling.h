@@ -12,6 +12,7 @@ namespace NeuralNetworkCPP {
 		///	@brief Not recommended, please use <code>Dumpling(const vector&lt;int&gt;&amp; shape)</code>.
 		explicit Dumpling(const int num, const int channels, const int width, 
 			const int height);
+		
 		explicit Dumpling(const vector<int>& shape);
 		~Dumpling();
 
