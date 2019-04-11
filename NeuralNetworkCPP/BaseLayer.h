@@ -1,10 +1,12 @@
 #pragma once
 namespace NeuralNetworkCPP {
+	template <class T>
 	class BaseLayer
 	{
 	public:
-		BaseLayer();
-		~BaseLayer();
+		virtual ~BaseLayer()=0;
+	protected:
+		inline BaseLayer();
 	};
 }
 

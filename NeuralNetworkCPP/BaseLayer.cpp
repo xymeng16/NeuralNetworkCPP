@@ -2,12 +2,4 @@
 
 namespace NeuralNetworkCPP {
 
-	BaseLayer::BaseLayer()
-	{
-	}
-
-
-	BaseLayer::~BaseLayer()
-	{
-	}
 }
